@@ -42,6 +42,18 @@ a:hover {
   color: var(--primary-dark);
 }
 
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
 .container {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
@@ -125,6 +137,20 @@ a:hover {
   margin-top: 1.5rem;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cv-viewer {
+  width: 100%;
+  height: 750px;
+  border: none;
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+}
 .button {
   display: inline-flex;
   align-items: center;
@@ -315,7 +341,9 @@ main.section {
   font-weight: 700;
 }
 
-
+section {
+    scroll-margin-top: 90px;
+}
 .profile-img {
   width: 120px;
   height: 120px;
@@ -323,3 +351,5 @@ main.section {
   object-fit: cover;
   margin-bottom: 1rem;
 }
+  
+  
