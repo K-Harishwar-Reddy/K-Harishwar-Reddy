@@ -3,303 +3,853 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Harishwar Reddy K — Ph.D. researcher in foundation models, digital pathology, self-supervised learning, and biomedical AI.">
-  <title>Harishwar Reddy K | AI Researcher</title>
+
+  <meta
+    name="description"
+    content="Harishwar Reddy K — Ph.D. researcher in machine learning, computer vision, foundation models, multimodal AI, digital pathology, and biomedical imaging."
+  >
+  <meta
+    name="keywords"
+    content="machine learning, artificial intelligence, computer vision, foundation models, self-supervised learning, multimodal AI, VLM, LLM, digital pathology, biomedical AI, MLOps"
+  >
+
+  <title>Harishwar Reddy K | AI & Machine Learning Researcher</title>
   <link rel="stylesheet" href="styles.css">
+
   <style>
-    section { scroll-margin-top: 100px; }
-    .hero { padding: 5.5rem 0 4rem; background: radial-gradient(circle at top right, rgba(30,79,143,.12), transparent 34%); }
-    .hero-grid { align-items: center; }
-    .hero h1 { font-size: clamp(2.8rem,6vw,5rem); letter-spacing:-.04em; max-width:14ch; }
-    .hero-subtitle { color:var(--primary); font-size:1.3rem; font-weight:700; margin:.2rem 0 1rem; }
-    .tag-row { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.3rem; }
-    .tag { background:#eaf1fb; color:var(--primary-dark); border:1px solid rgba(30,79,143,.18); border-radius:999px; padding:.4rem .75rem; font-weight:700; font-size:.9rem; }
-    .quick-links { display:grid; grid-template-columns:repeat(2,1fr); gap:.65rem; margin-top:1.2rem; }
-    .quick-links a { text-align:center; border:1px solid var(--line); border-radius:12px; padding:.65rem; font-weight:700; background:#fff; }
-    .impact-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
-    .metric-card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:1.3rem; }
-    .metric-card strong { display:block; color:var(--primary); font-size:2rem; line-height:1; margin-bottom:.35rem; }
-    .metric-card span { color:var(--muted); font-weight:600; }
-    .about-grid { display:grid; grid-template-columns:1.35fr .65fr; gap:1.25rem; }
-    .focus-card { padding:1rem; background:#eaf1fb; border-left:4px solid var(--primary); border-radius:0 12px 12px 0; margin-bottom:.8rem; }
-    .focus-card strong { display:block; }
-    .timeline-item { transition:transform .2s ease; }
-    .timeline-item:hover { transform:translateY(-2px); }
-    .timeline-content ul { margin:.8rem 0 0; padding-left:1.2rem; }
-    .timeline-content li+li { margin-top:.4rem; }
-    .featured-card { grid-column:span 2; background:linear-gradient(135deg,var(--primary),var(--primary-dark)); color:#fff; }
-    .featured-card p { color:rgba(255,255,255,.84); }
-    .project-meta { color:var(--muted); font-weight:700; font-size:.9rem; margin-top:auto; padding-top:1rem; }
-    .project-card { display:flex; flex-direction:column; }
-    .publication-list { list-style:none; padding-left:0; }
-    .publication-list li { padding:1.1rem 0; border-bottom:1px solid var(--line); }
-    .publication-list li:last-child { border-bottom:0; }
-    .publication-title { color:var(--text); font-weight:800; }
-    .publication-title:hover { color:var(--primary); }
-    .publication-meta,.publication-authors { color:var(--muted); margin-top:.25rem; }
-    .publication-authors { font-size:.94rem; }
-    .badge { display:inline-block; margin-left:.4rem; padding:.15rem .45rem; border-radius:999px; background:#e8f5ed; color:#1f7a4c; font-size:.78rem; font-weight:800; }
-    .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-    .cv-viewer { width:100%; height:780px; border:1px solid var(--line); border-radius:var(--radius); margin-top:1.2rem; }
-    .alt-bg { background:linear-gradient(180deg,rgba(238,243,248,.7),rgba(238,243,248,.25)); }
-    @media(max-width:900px){ .impact-grid,.skills-grid,.about-grid{grid-template-columns:1fr 1fr;} .featured-card{grid-column:span 2;} }
-    @media(max-width:640px){ .impact-grid,.skills-grid,.about-grid,.quick-links{grid-template-columns:1fr;} .featured-card{grid-column:auto;} .cv-viewer{height:520px;} }
+    section {
+      scroll-margin-top: 95px;
+    }
+
+    .hero {
+      padding: 4.25rem 0 3.5rem;
+      background: var(--bg);
+    }
+
+    .hero-grid {
+      align-items: center;
+    }
+
+    .hero h1 {
+      max-width: none;
+      margin-bottom: 0.45rem;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      letter-spacing: -0.03em;
+    }
+
+    .role-line {
+      margin: 0 0 1.1rem;
+      color: var(--primary);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      font-weight: 700;
+    }
+
+    .hero-text {
+      max-width: 70ch;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1.25rem;
+    }
+
+    .tag {
+      padding: 0.38rem 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .quick-links a {
+      padding: 0.65rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 1.25rem;
+    }
+
+    .focus-card {
+      margin-bottom: 0.8rem;
+      padding: 1rem;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      background: var(--surface-soft);
+    }
+
+    .focus-card strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-content ul {
+      margin: 0.8rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .timeline-content li + li {
+      margin-top: 0.4rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .project-meta {
+      margin-top: auto;
+      padding-top: 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .publication-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .publication-controls a {
+      padding: 0.55rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .publication-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .publication-item {
+      padding: 1.25rem 1.35rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 8px 22px rgba(16, 24, 40, 0.05);
+    }
+
+    .publication-topline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-bottom: 0.45rem;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .publication-type {
+      color: var(--primary);
+    }
+
+    .publication-item h3 {
+      margin: 0;
+      font-size: 1.03rem;
+      line-height: 1.45;
+    }
+
+    .publication-item h3 a {
+      color: var(--text);
+    }
+
+    .publication-item h3 a:hover {
+      color: var(--primary);
+    }
+
+    .publication-authors {
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .cv-viewer {
+      width: 100%;
+      height: 760px;
+      margin-top: 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .alt-bg {
+      background: linear-gradient(
+        180deg,
+        rgba(238, 243, 248, 0.65),
+        rgba(238, 243, 248, 0.25)
+      );
+    }
+
+    @media (max-width: 900px) {
+      .about-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 3.25rem;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+
+      .cv-viewer {
+        height: 520px;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="#home">Harishwar Reddy K</a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#skills">Skills</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Harishwar Reddy K</a>
 
-<main>
-<section id="home" class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">Ph.D. Researcher · Computer Vision · Biomedical AI</p>
-      <h1>Building scalable AI for digital pathology</h1>
-      <p class="hero-subtitle">Harishwar Reddy K</p>
-      <p class="hero-text">I develop foundation models, self-supervised learning methods, and explainable AI systems for large-scale histopathology analysis. My work connects machine learning with clinical research in kidney disease, computational pathology, multi-omics, and multimodal AI.</p>
-      <div class="tag-row">
-        <span class="tag">Foundation Models</span><span class="tag">Self-Supervised Learning</span>
-        <span class="tag">Computational Pathology</span><span class="tag">Multiple Instance Learning</span>
-        <span class="tag">Explainable AI</span><span class="tag">VLMs &amp; LLMs</span>
-      </div>
-      <div class="hero-actions">
-        <a class="button primary" href="#projects">Explore My Work</a>
-        <a class="button secondary" href="#publications">Publications</a>
-        <a class="button secondary" href="#cv">View CV</a>
-      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <aside class="hero-card">
-      <img src="images/profile.jpg" alt="Portrait of Harishwar Reddy" class="profile-img">
-      <h2>Currently</h2>
-      <p>Ph.D. student in Electrical and Computer Engineering at the University of Florida.</p>
-      <ul class="summary-list">
-        <li>Digital and computational pathology</li>
-        <li>Multi-omics and biomedical AI</li>
-        <li>Vision-language and large language models</li>
-      </ul>
-      <div class="quick-links">
-        <a href="mailto:harishwarreddy.k@ufl.edu">Email</a>
-        <a href="https://www.linkedin.com/in/khreddy" target="_blank">LinkedIn</a>
-        <a href="https://github.com/K-Harishwar-Reddy" target="_blank">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=xxf8Lo4AAAAJ" target="_blank">Scholar</a>
-      </div>
-    </aside>
-  </div>
-</section>
+  </header>
 
-<section class="section">
-  <div class="container impact-grid">
-    <article class="metric-card"><strong>30K+</strong><span>whole-slide images used for pretraining</span></article>
-    <article class="metric-card"><strong>11</strong><span>foundation models benchmarked</span></article>
-    <article class="metric-card"><strong>11</strong><span>kidney pathology tasks evaluated</span></article>
-    <article class="metric-card"><strong>7+</strong><span>peer-reviewed publications</span></article>
-  </div>
-</section>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Ph.D. Researcher · Artificial Intelligence</p>
 
-<section id="about" class="section alt-bg">
-  <div class="container">
-    <div class="section-heading">
-      <p class="section-label">About</p>
-      <h2>Research at the intersection of AI and medicine</h2>
-    </div>
-    <div class="about-grid">
-      <div class="content-card">
-        <p>My primary interests are digital pathology, explainable foundation models, self-supervised learning, and multi-omics. I also have experience with vision-language models and large language models for multimodal biomedical AI and computer vision applications.</p>
-        <p>I build end-to-end systems for representation learning, segmentation, cell detection, multiple instance learning, pathomic feature extraction, clinical prediction, and model explainability.</p>
-      </div>
-      <div>
-        <div class="focus-card"><strong>Clinical focus</strong>Kidney disease diagnosis, prognosis, treatment response, and biomarker discovery.</div>
-        <div class="focus-card"><strong>Methods</strong>Foundation models, SSL, MIL, segmentation, XAI, VLMs, and LLMs.</div>
-        <div class="focus-card"><strong>Engineering</strong>Python, PyTorch, CUDA, SLURM, Docker, MLflow, and Prefect.</div>
-      </div>
-    </div>
-  </div>
-</section>
+          <h1>Harishwar Reddy K</h1>
 
-<section id="experience" class="section">
-  <div class="container">
-    <div class="section-heading"><p class="section-label">Experience</p><h2>Research and engineering experience</h2></div>
-    <div class="timeline">
-      <article class="timeline-item">
-        <div class="timeline-meta"><strong>Aug 2023 — Present</strong><br>Gainesville, FL</div>
-        <div class="timeline-content">
-          <h3>Graduate Research Assistant · University of Florida</h3>
-          <ul>
-            <li>Pretrained the first kidney-specific multi-stain, multi-resolution histopathology foundation model on approximately 30,000 whole-slide images.</li>
-            <li>Built representation learning, MIL, clinical prediction, and explainable AI pipelines for diagnosis, treatment response, and biomarker discovery.</li>
-            <li>Developed an open-source Python framework benchmarking 11 foundation models across 11 kidney pathology tasks.</li>
-            <li>Built segmentation, cell detection, and feature extraction pipelines for renal tissue structures and immune cells.</li>
-          </ul>
+          <p class="role-line">
+            Machine Learning · Computer Vision · Foundation Models · Multimodal AI
+          </p>
+
+          <p class="hero-text">
+            I am a Ph.D. student in Electrical and Computer Engineering at the
+            University of Florida. I develop scalable machine learning systems
+            for visual representation learning, foundation models, explainable
+            AI, multimodal learning, biomedical imaging, and large-scale
+            prediction problems.
+          </p>
+
+          <div class="tag-row" aria-label="Areas of expertise">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Self-Supervised Learning</span>
+            <span class="tag">Foundation Models</span>
+            <span class="tag">VLMs &amp; LLMs</span>
+            <span class="tag">MLOps</span>
+            <span class="tag">CUDA &amp; SLURM</span>
+            <span class="tag">Biomedical AI</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#experience">View Experience</a>
+            <a class="button secondary" href="#projects">View Projects</a>
+            <a class="button secondary" href="#cv">View CV</a>
+          </div>
         </div>
-      </article>
-      <article class="timeline-item">
-        <div class="timeline-meta"><strong>Apr 2023 — Jul 2023</strong><br>Bangalore, India</div>
-        <div class="timeline-content">
-          <h3>Research Intern · Siemens</h3>
-          <ul>
-            <li>Developed an Explainable Active Learning framework for industrial computer vision using MLflow and Prefect.</li>
-            <li>Fine-tuned deep neural networks for multi-class baggage classification.</li>
-            <li>Designed active-learning strategies to prioritize high-value samples and reduce annotation burden.</li>
-          </ul>
-        </div>
-      </article>
-      <article class="timeline-item">
-        <div class="timeline-meta"><strong>Jul 2022 — Mar 2023</strong><br>Bangalore, India</div>
-        <div class="timeline-content">
-          <h3>Junior Research Fellow · Indian Institute of Science</h3>
-          <ul>
-            <li>Conducted research in medical image analysis, image denoising, and explainable AI for ophthalmic imaging.</li>
-            <li>Evaluated Layer-CAM, Eigen-CAM, and HiResCAM with Inception-ResNet-v2 for OCT abnormality detection.</li>
-            <li>First-authored research submitted to Med-NeurIPS and ISBI.</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
 
-<section id="projects" class="section alt-bg">
-  <div class="container">
-    <div class="section-heading"><p class="section-label">Selected Work</p><h2>Research software and projects</h2></div>
-    <div class="cards-grid">
-      <article class="info-card featured-card project-card">
-        <h3>Kidney Histopathology Foundation Model</h3>
-        <p>Pretrained a kidney-specific model across multiple stains and imaging resolutions using self-supervised learning on approximately 30,000 whole-slide images.</p>
-        <p class="project-meta">PyTorch · Self-Supervised Learning · Vision Transformers · HPC</p>
-      </article>
-      <article class="info-card project-card">
-        <h3>Foundation Model Benchmark</h3>
-        <p>Open-source Python framework for reproducible evaluation of 11 state-of-the-art histopathology foundation models across 11 kidney pathology tasks.</p>
-        <p class="project-meta">Classification · Regression · Segmentation · Prognosis</p>
-      </article>
-      <article class="info-card project-card">
-        <h3>Lupus Nephritis Treatment Response</h3>
-        <p>Developed interpretable pathomic feature pipelines and clinical prediction models using renal tissue-unit features.</p>
-        <p class="project-meta">Pathomics · MIL · Clinical Prediction · XAI</p>
-      </article>
-      <article class="info-card project-card">
-        <h3>Renal Tissue Segmentation</h3>
-        <p>Built scalable pipelines for segmenting glomeruli, tufts, arteries, tubules, and immune cells in gigapixel whole-slide images.</p>
-        <p class="project-meta">DeepLabV3+ · Cell Detection · Feature Extraction</p>
-      </article>
-    </div>
-  </div>
-</section>
+        <aside class="hero-card">
+          <img
+            src="images/profile.jpg"
+            alt="Portrait of Harishwar Reddy"
+            class="profile-img"
+          >
 
-<section id="publications" class="section">
-  <div class="container">
-    <div class="section-heading"><p class="section-label">Publications</p><h2>Selected peer-reviewed work</h2></div>
-    <div class="content-card">
-      <ul class="publication-list">
-        <li>
-          <a class="publication-title" href="https://journals.lww.com/kidney360/fulltext/10.34067/kid.0000001196" target="_blank">A Scoping Review of Machine Learning Applications for Diagnosis, Classification, and Prognosis in Lupus Nephritis</a>
-          <div class="publication-meta"><em>Kidney360</em>, 2026. <span class="badge">First author</span></div>
-          <div class="publication-authors">Harishwar Reddy Kasireddy, Patricio S. La Rosa, Dawit Demeke, Jeffrey B. Hodgin, Pinaki Sarder.</div>
-        </li>
-        <li>
-          <a class="publication-title" href="https://www.amjtransplant.org/article/S1600-6135(26)00994-9/fulltext" target="_blank">Pathomic Analysis of 5-Year Surveillance Biopsies as Predictors of Kidney Allograft Loss</a>
-          <div class="publication-meta"><em>American Journal of Transplantation</em>, 2026.</div>
-        </li>
-        <li>
-          <a class="publication-title" href="https://spie.org/medical-imaging/presentation/Explainable-feature-embeddings-from-histopathology-foundation-models--A-case/13413-20" target="_blank">Explainable Feature Embeddings from Histopathology Foundation Models</a>
-          <div class="publication-meta"><em>SPIE Medical Imaging</em>, 2025. <span class="badge">First author</span></div>
-        </li>
-        <li>
-          <a class="publication-title" href="https://www.mdpi.com/2075-4418/13/16/2659" target="_blank">Deep-Learning-Based Visualization and Volumetric Analysis of Fluid Regions in OCT Scans</a>
-          <div class="publication-meta"><em>Diagnostics</em>, 2023.</div>
-        </li>
-        <li>
-          <a class="publication-title" href="https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/86.pdf" target="_blank">Denoising Enhances Visualization of Optical Coherence Tomography Images</a>
-          <div class="publication-meta"><em>Med-NeurIPS</em>, 2022. <span class="badge">First author</span></div>
-        </li>
-      </ul>
-    </div>
+          <h2>Current Role</h2>
+          <p>
+            Graduate Research Assistant and Ph.D. student at the University of Florida.
+          </p>
 
-    <div class="section-heading" style="margin-top:2rem;"><p class="section-label">Under Review</p><h2>Current manuscripts</h2></div>
-    <div class="content-card">
-      <ul class="publication-list">
-        <li>
-          <a class="publication-title" href="https://arxiv.org/abs/2603.15967" target="_blank">A Comprehensive Benchmark of Histopathology Foundation Models for Kidney Digital Pathology Images</a>
-          <div class="publication-meta"><em>Nature Communications</em>, under review. <span class="badge">First author</span></div>
-        </li>
-        <li>
-          <a class="publication-title" href="https://www.researchgate.net/publication/397105059_The_Evolving_Role_of_Machine_Learning_in_Metabolomics_for_Precision_Nutrition_A_Systematic_Review" target="_blank">The Evolving Role of Machine Learning in Metabolomics for Precision Nutrition</a>
-          <div class="publication-meta"><em>IEEE Journal of Biomedical and Health Informatics</em>, under review.</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="section alt-bg">
-  <div class="container">
-    <div class="section-heading"><p class="section-label">Skills</p><h2>Technical toolkit</h2></div>
-    <div class="skills-grid">
-      <article class="skill-card"><h3>Programming &amp; Tools</h3><p>Python, MATLAB, Git, Docker, Linux, Jupyter, MLflow, Prefect</p></article>
-      <article class="skill-card"><h3>Machine Learning</h3><p>PyTorch, Scikit-learn, Hugging Face, Pandas, NumPy, CUDA, SLURM, MLOps</p></article>
-      <article class="skill-card"><h3>Research Expertise</h3><p>Foundation Models, SSL, MIL, Computer Vision, Digital Pathology, Explainable AI, Multi-Omics</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="cv" class="section">
-  <div class="container">
-    <div class="section-heading"><p class="section-label">Curriculum Vitae</p><h2>Full CV</h2></div>
-    <div class="content-card">
-      <div class="hero-actions">
-        <a class="button primary" href="CV_Harishwar.pdf" target="_blank">Open CV</a>
-        <a class="button secondary" href="CV_Harishwar.pdf" download>Download PDF</a>
+          <div class="quick-links">
+            <a href="mailto:harishwarreddy.k@ufl.edu">Email</a>
+            <a href="https://www.linkedin.com/in/khreddy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/K-Harishwar-Reddy" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=xxf8Lo4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </aside>
       </div>
-      <iframe class="cv-viewer" src="CV_Harishwar.pdf" title="Harishwar Reddy CV"></iframe>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact" class="section alt-bg">
-  <div class="container">
-    <div class="section-heading">
-      <p class="section-label">Contact</p>
-      <h2>Open to research and industry opportunities</h2>
-      <p>I am interested in research internships, applied scientist roles, machine learning positions, and collaborations in biomedical AI, computer vision, foundation models, and computational pathology.</p>
-    </div>
-    <div class="contact-links">
-      <a class="button primary" href="mailto:harishwarreddy.k@ufl.edu">Email Me</a>
-      <a class="button secondary" href="https://www.linkedin.com/in/khreddy" target="_blank">LinkedIn</a>
-      <a class="button secondary" href="https://github.com/K-Harishwar-Reddy" target="_blank">GitHub</a>
-      <a class="button secondary" href="https://scholar.google.com/citations?user=xxf8Lo4AAAAJ" target="_blank">Google Scholar</a>
-    </div>
-  </div>
-</section>
-</main>
+    <section id="about" class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">About</p>
+          <h2>AI research with strong applied engineering</h2>
+        </div>
 
-<footer class="site-footer">
-  <div class="container footer-wrap"><p>© 2026 Harishwar Reddy K</p><a href="#home">Back to top ↑</a></div>
-</footer>
+        <div class="about-grid">
+          <div class="content-card">
+            <p>
+              My primary research interests include computer vision, foundation
+              models, self-supervised learning, explainable AI, digital
+              pathology, multi-omics, and clinical prediction. I also have
+              experience applying vision-language models and large language
+              models to multimodal AI, content analysis, and facial attribute
+              recognition.
+            </p>
 
-<script>
-const sections=document.querySelectorAll("main section[id]");
-const links=document.querySelectorAll('.site-nav a[href^="#"]');
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(!entry.isIntersecting)return;
-    links.forEach(link=>link.classList.toggle("active",link.getAttribute("href")==="#"+entry.target.id));
-  });
-},{rootMargin:"-35% 0px -55% 0px",threshold:0});
-sections.forEach(section=>observer.observe(section));
-</script>
+            <p>
+              My work combines research and engineering: model development,
+              large-scale experimentation, reproducible evaluation, workflow
+              automation, GPU computing, data pipelines, and collaboration with
+              domain experts.
+            </p>
+          </div>
+
+          <div>
+            <div class="focus-card">
+              <strong>Research roles</strong>
+              Research Scientist, Applied Scientist, ML Research, and Computer Vision.
+            </div>
+
+            <div class="focus-card">
+              <strong>Engineering roles</strong>
+              Machine Learning Engineer, AI Engineer, MLOps, and model evaluation.
+            </div>
+
+            <div class="focus-card">
+              <strong>Application areas</strong>
+              Biomedical AI, digital pathology, multimodal systems, and visual analytics.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Experience</p>
+          <h2>Research and industry experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <strong>Aug 2023 — Present</strong><br>
+              Gainesville, FL
+            </div>
+
+            <div class="timeline-content">
+              <h3>Graduate Research Assistant · University of Florida</h3>
+              <ul>
+                <li>
+                  Pretrained a kidney-specific multi-stain, multi-resolution
+                  histopathology foundation model on approximately 30,000
+                  whole-slide images.
+                </li>
+                <li>
+                  Built representation learning, multiple instance learning,
+                  clinical prediction, and explainable AI pipelines.
+                </li>
+                <li>
+                  Developed an open-source Python framework benchmarking 11
+                  foundation models across 11 downstream tasks.
+                </li>
+                <li>
+                  Built scalable segmentation, cell detection, and quantitative
+                  feature extraction systems for gigapixel imagery.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <strong>Apr 2023 — Jul 2023</strong><br>
+              Bangalore, India
+            </div>
+
+            <div class="timeline-content">
+              <h3>Research Intern · Siemens</h3>
+              <ul>
+                <li>
+                  Developed an explainable active learning framework for
+                  industrial computer vision using MLflow and Prefect.
+                </li>
+                <li>
+                  Fine-tuned deep neural networks for multiclass object classification.
+                </li>
+                <li>
+                  Designed sample-selection strategies to reduce annotation effort
+                  and improve model interpretability.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <strong>Jul 2022 — Mar 2023</strong><br>
+              Bangalore, India
+            </div>
+
+            <div class="timeline-content">
+              <h3>Junior Research Fellow · Indian Institute of Science</h3>
+              <ul>
+                <li>
+                  Conducted research in computer vision, medical image analysis,
+                  image denoising, and explainable AI.
+                </li>
+                <li>
+                  Evaluated Layer-CAM, Eigen-CAM, and HiResCAM with
+                  Inception-ResNet-v2 for OCT abnormality analysis.
+                </li>
+                <li>
+                  First-authored work presented through medical imaging venues.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Projects</p>
+          <h2>Selected AI and machine learning work</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="info-card project-card">
+            <h3>Histopathology Foundation Model</h3>
+            <p>
+              Large-scale self-supervised pretraining across multiple stains and
+              image resolutions using approximately 30,000 whole-slide images.
+            </p>
+            <p class="project-meta">
+              PyTorch · Vision Transformers · Distributed Computing · HPC
+            </p>
+          </article>
+
+          <article class="info-card project-card">
+            <h3>Foundation Model Benchmarking Framework</h3>
+            <p>
+              Reproducible Python framework for comparing 11 foundation models
+              across classification, regression, detection, and prognosis tasks.
+            </p>
+            <p class="project-meta">
+              Python · Model Evaluation · Scikit-learn · Reproducibility
+            </p>
+          </article>
+
+          <article class="info-card project-card">
+            <h3>Explainable Active Learning</h3>
+            <p>
+              Active-learning and workflow-orchestration system for industrial
+              computer vision with explainability and experiment tracking.
+            </p>
+            <p class="project-meta">
+              Deep Learning · MLflow · Prefect · MLOps
+            </p>
+          </article>
+
+          <article class="info-card project-card">
+            <h3>Clinical Prediction and Pathomics</h3>
+            <p>
+              Interpretable machine learning pipelines for treatment response,
+              prognosis, biomarker discovery, and quantitative image analysis.
+            </p>
+            <p class="project-meta">
+              MIL · Feature Engineering · XAI · Clinical AI
+            </p>
+          </article>
+
+          <article class="info-card project-card">
+            <h3>Vision-Language and Large Language Models</h3>
+            <p>
+              Research on facial attribute recognition, multimodal content
+              analysis, online toxicity, and sensitive-content detection.
+            </p>
+            <p class="project-meta">
+              VLMs · LLMs · Multimodal AI · Responsible AI
+            </p>
+          </article>
+
+          <article class="info-card project-card">
+            <h3>Medical Image Analysis</h3>
+            <p>
+              Deep learning, denoising, volumetric analysis, and explainability
+              for optical coherence tomography and histopathology.
+            </p>
+            <p class="project-meta">
+              CNNs · CAM Methods · Segmentation · Image Processing
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Publications</p>
+          <h2>Research publications</h2>
+          <p>
+            Complete list of distinct scholarly works indexed across my public
+            research profiles. Published versions are shown instead of duplicate
+            preprint records when both exist.
+          </p>
+        </div>
+
+        <div class="publication-controls">
+          <a
+            href="https://scholar.google.com/citations?user=xxf8Lo4AAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Google Scholar
+          </a>
+
+          <a
+            href="https://github.com/K-Harishwar-Reddy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub
+          </a>
+        </div>
+
+        <div class="publication-grid">
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Journal Article</span>
+              <span class="publication-year">American Journal of Transplantation, 2026</span>
+            </div>
+            <h3>
+              <a href="https://www.amjtransplant.org/article/S1600-6135(26)00994-9/fulltext" target="_blank" rel="noopener noreferrer">
+                Pathomic Analysis of 5-Year Surveillance Biopsies as Predictors of Kidney Allograft Loss
+              </a>
+            </h3>
+            <p class="publication-authors">P. Sarder, A. Denic, B. H. Smith, A. S. Paul, A. Gupta, H. R. Kasireddy, et al.</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Journal Article · First Author</span>
+              <span class="publication-year">Kidney360, 2026</span>
+            </div>
+            <h3>
+              <a href="https://journals.lww.com/kidney360/fulltext/10.34067/kid.0000001196" target="_blank" rel="noopener noreferrer">
+                A Scoping Review of Machine Learning Applications for Diagnosis, Classification, and Prognosis in Lupus Nephritis
+              </a>
+            </h3>
+            <p class="publication-authors">H. R. Kasireddy, P. S. La Rosa, D. Demeke, J. B. Hodgin, P. Sarder</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Preprint · First Author</span>
+              <span class="publication-year">arXiv, 2026 · Under review</span>
+            </div>
+            <h3>
+              <a href="https://arxiv.org/abs/2603.15967" target="_blank" rel="noopener noreferrer">
+                A Comprehensive Benchmark of Histopathology Foundation Models for Kidney Histopathology
+              </a>
+            </h3>
+            <p class="publication-authors">H. R. Kasireddy, P. S. La Rosa, A. Gupta, A. S. Paul, et al.</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Journal Article</span>
+              <span class="publication-year">Scientific Reports, 2026</span>
+            </div>
+            <h3>
+              <a href="https://www.nature.com/articles/s41598-026-39584-3" target="_blank" rel="noopener noreferrer">
+                FaceScanPaliGemma: Multi-Agent Vision-Language Models for Facial Attribute Recognition
+              </a>
+            </h3>
+            <p class="publication-authors">N. AlDahoul, M. J. T. Tan, H. R. Kasireddy, Y. Zaki</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Journal Article</span>
+              <span class="publication-year">Journal of Big Data, 2025/2026</span>
+            </div>
+            <h3>
+              <a href="https://link.springer.com/article/10.1186/s40537-025-01336-x" target="_blank" rel="noopener noreferrer">
+                Guardians of Digital Safety: Benchmarking Large Language Models in the Fight Against Online Toxicity
+              </a>
+            </h3>
+            <p class="publication-authors">N. AlDahoul, M. J. T. Tan, H. R. Kasireddy, Y. Zaki</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Preprint</span>
+              <span class="publication-year">TechRxiv, 2025 · Under review</span>
+            </div>
+            <h3>
+              <a href="https://scholar.google.com/scholar?q=The+Evolving+Role+of+Machine+Learning+in+Metabolomics+for+Precision+Nutrition" target="_blank" rel="noopener noreferrer">
+                The Evolving Role of Machine Learning in Metabolomics for Precision Nutrition: A Systematic Review
+              </a>
+            </h3>
+            <p class="publication-authors">M. J. T. Tan, D. A. Lichlyter, M. M. Ebeid, M. W. Christopher, H. R. Kasireddy, et al.</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Conference Abstract · First Author</span>
+              <span class="publication-year">Journal of the American Society of Nephrology / ASN Kidney Week, 2025</span>
+            </div>
+            <h3>
+              <a href="https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4350564" target="_blank" rel="noopener noreferrer">
+                Automated Prediction of Drug Treatment Response in Lupus Nephritis Using Machine Learning
+              </a>
+            </h3>
+            <p class="publication-authors">H. R. Kasireddy, D. Demeke, P. S. La Rosa, et al.</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Conference Paper · First Author</span>
+              <span class="publication-year">SPIE Medical Imaging: Digital and Computational Pathology, 2025</span>
+            </div>
+            <h3>
+              <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13413/134130M/Explainable-feature-embeddings-from-histopathology-foundation-models--a-case/10.1117/12.3047908.short" target="_blank" rel="noopener noreferrer">
+                Explainable Feature Embeddings from Histopathology Foundation Models: A Case Study for End-Stage Kidney Disease Risk Analysis in Diabetic Nephropathy Patients
+              </a>
+            </h3>
+            <p class="publication-authors">H. R. Kasireddy, N. Lucarelli, D. Yun, K. C. Moon, P. S. La Rosa, et al.</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Journal Article</span>
+              <span class="publication-year">Frontiers in Public Health, 2025</span>
+            </div>
+            <h3>
+              <a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1522673/full" target="_blank" rel="noopener noreferrer">
+                Health Is Beyond Genetics: On the Integration of Lifestyle and Environment in Real-Time for Hyper-Personalized Medicine
+              </a>
+            </h3>
+            <p class="publication-authors">M. J. T. Tan, H. R. Kasireddy, A. B. Satriya, H. A. Karim, N. AlDahoul</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Preprint</span>
+              <span class="publication-year">arXiv, 2024</span>
+            </div>
+            <h3>
+              <a href="https://arxiv.org/abs/2411.17123" target="_blank" rel="noopener noreferrer">
+                Advancing Content Moderation: Evaluating Large Language Models for Detecting Sensitive Content Across Text, Images, and Videos
+              </a>
+            </h3>
+            <p class="publication-authors">N. AlDahoul, M. J. T. Tan, H. R. Kasireddy, Y. Zaki</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Preprint</span>
+              <span class="publication-year">arXiv, 2024</span>
+            </div>
+            <h3>
+              <a href="https://arxiv.org/abs/2410.24148" target="_blank" rel="noopener noreferrer">
+                Exploring Vision-Language Models for Facial Attribute Recognition: Emotion, Race, Gender, and Age
+              </a>
+            </h3>
+            <p class="publication-authors">N. AlDahoul, M. J. T. Tan, H. R. Kasireddy, Y. Zaki</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Journal Article · First Author</span>
+              <span class="publication-year">Diagnostics, 2023</span>
+            </div>
+            <h3>
+              <a href="https://www.mdpi.com/2075-4418/13/16/2659" target="_blank" rel="noopener noreferrer">
+                Deep-Learning-Based Visualization and Volumetric Analysis of Fluid Regions in Optical Coherence Tomography Scans
+              </a>
+            </h3>
+            <p class="publication-authors">H. R. Kasireddy, U. R. Kallam, S. M. S. K. Mantrala, H. Kongara, A. Shivhare, et al.</p>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-topline">
+              <span class="publication-type">Workshop Paper · First Author</span>
+              <span class="publication-year">Med-NeurIPS, 2022</span>
+            </div>
+            <h3>
+              <a href="https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/86.pdf" target="_blank" rel="noopener noreferrer">
+                Denoising Enhances Visualization of Optical Coherence Tomography Images
+              </a>
+            </h3>
+            <p class="publication-authors">H. R. Kasireddy, A. Shivhare, H. Kongara, J. Saita, R. Prasad, C. S. Seelamantula</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Skills</p>
+          <h2>Technical skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Programming &amp; ML</h3>
+            <p>
+              Python, PyTorch, Scikit-learn, Hugging Face, NumPy, Pandas, MATLAB
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>AI Methods</h3>
+            <p>
+              Computer Vision, Foundation Models, Self-Supervised Learning,
+              Multiple Instance Learning, VLMs, LLMs, Explainable AI
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Engineering &amp; Infrastructure</h3>
+            <p>
+              Git, Docker, Linux, CUDA, SLURM, Jupyter, MLflow, Prefect, MLOps
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Curriculum Vitae</p>
+          <h2>CV</h2>
+        </div>
+
+        <div class="content-card">
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="CV_Harishwar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open CV
+            </a>
+
+            <a
+              class="button secondary"
+              href="CV_Harishwar.pdf"
+              download
+            >
+              Download PDF
+            </a>
+          </div>
+
+          <iframe
+            class="cv-viewer"
+            src="CV_Harishwar.pdf"
+            title="Harishwar Reddy Curriculum Vitae"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Contact</p>
+          <h2>Open to AI research and engineering opportunities</h2>
+          <p>
+            I am interested in research scientist, applied scientist, machine
+            learning engineer, computer vision, foundation-model, multimodal AI,
+            MLOps, and biomedical AI opportunities.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a class="button primary" href="mailto:harishwarreddy.k@ufl.edu">Email Me</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/khreddy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/K-Harishwar-Reddy" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button secondary" href="https://scholar.google.com/citations?user=xxf8Lo4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Harishwar Reddy K</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("main section[id]");
+    const links = document.querySelectorAll('.site-nav a[href^="#"]');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          links.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${entry.target.id}`
+            );
+          });
+        });
+      },
+      {
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
 </body>
 </html>
